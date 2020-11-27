@@ -34,8 +34,10 @@
 
       使用动态代理进行运行期织入。为被切类生成代理类，当被切对象被其它类依赖时，改为注入代理类。（IOC容器）
 
-    - AspectJ:
+      ![bf92b137f9338b05ce6b3313673db8f6.png](AOP Usage Share.assets/Image01.png) 
 
+    - AspectJ:
+    
       通过修改代码进行静态织入（在编译器/编译后/加载期），在被切类的逻辑基础上附加Advice的逻辑。
 - Spring AOP借用了AspectJ定义的一套注解
 
@@ -161,5 +163,6 @@ AspectJ Cons
 - 数据记录
     - 执行日期、参数、耗时
 - 执行限制
+    - 权限校验
     - Schedule
     - 重复提交请求
