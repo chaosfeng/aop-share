@@ -25,5 +25,6 @@
         <aspect.version>1.8.13</aspect.version>
         <spring.boot.version>2.3.3.RELEASE</spring.boot.version>
         <commons-lang3.version>3.8.1</commons-lang3.version>
+        <redisson-spring-boot-starter.version>3.13.6</redisson-spring-boot-starter.version>
     </properties>
 </project>

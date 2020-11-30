@@ -4,6 +4,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author lorenl
@@ -11,6 +12,7 @@ import org.springframework.data.redis.repository.configuration.EnableRedisReposi
  */
 @EnableRedisRepositories
 @EnableAspectJAutoProxy
+@EnableTransactionManagement
 @SpringBootApplication(scanBasePackages = "com.share.loren.aop.usage")
 public class Application {
 
