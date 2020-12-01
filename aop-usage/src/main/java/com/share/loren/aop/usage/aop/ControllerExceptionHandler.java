@@ -21,6 +21,7 @@ import org.springframework.http.HttpStatus;
 @Configuration
 public class ControllerExceptionHandler {
 
+    // @Around(value = "execution(* com.share.loren.aop.usage.service..*.*(..))") // <-- test transaction aop order
     @Around(value = "com.share.loren.aop.usage.aop.pointcut.MyPointCut.restController()")
     public ResponseMessage handleControllerException(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         try {

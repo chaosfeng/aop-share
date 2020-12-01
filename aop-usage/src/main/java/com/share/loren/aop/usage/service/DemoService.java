@@ -18,7 +18,6 @@ public class DemoService {
     @Transactional(rollbackFor = Exception.class)
     public void demoInsert(String action) {
         jdbcTemplate.execute("insert into demo_table values ('" + action + "')");
-        // todo aop order transaction失效？
         if ("rollback".equals(action)) {
             int i = 1 / 0;
         }

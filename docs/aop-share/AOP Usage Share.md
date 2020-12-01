@@ -12,7 +12,7 @@
 
 > 横切需求："在不侵入业务代码的情况下，为所有API记录每次请求的信息（API逻辑执行前）"
 
-* **AOP**：实现 "在不侵入业务代码的情况下，为所有API记录每次请求的信息（API逻辑执行前）"的过程
+* **AOP**：用切面的方式实现 "在不侵入业务代码的情况下，为所有API记录每次请求的信息（API逻辑执行前）"的过程
 * **Aspect**：“在不侵入业务代码的情况下，为所有API记录每次请求的信息（API逻辑执行前）”的实现，或者说Advice + Pointcut
 * Join point：每一个API
 * **Pointcut**：所有API（所有Join point的集合）
@@ -158,11 +158,11 @@ AspectJ Cons
 
 - Be careful. Check if your aspects are weaved to only what you wanted to be weaved.
 - You need extra build process with AspectJ Compiler or have to setup LTW (load-time weaving)
-##  AOP应用场景
 
-- 数据记录
-    - 执行日期、参数、耗时
-- 执行限制
-    - 权限校验
-    - Schedule
-    - 重复提交请求
+##  AOP应用场景
+- 日志
+- 权限校验
+- 缓存
+- 事务
+- 统一异常处理
+- Synchronization
