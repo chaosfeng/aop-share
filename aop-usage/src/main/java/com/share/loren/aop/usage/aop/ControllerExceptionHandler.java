@@ -17,12 +17,12 @@ import org.springframework.http.HttpStatus;
  * @date 11/27/2020
  */
 @Aspect
-@Order(10)
+// @Order(10)
 @Configuration
 public class ControllerExceptionHandler {
 
-    // @Around(value = "execution(* com.share.loren.aop.usage.service..*.*(..))") // <-- test transaction aop order
-    @Around(value = "com.share.loren.aop.usage.aop.pointcut.MyPointCut.restController()")
+    @Around(value = "execution(* com.share.loren.aop.usage.service..*.*(..))") // <-- test transaction aop order 1. @Order(10) 2. no @Order(10) or @Order
+    // @Around(value = "com.share.loren.aop.usage.aop.pointcut.MyPointCut.restController()")
     public ResponseMessage handleControllerException(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         try {
             return (ResponseMessage) proceedingJoinPoint.proceed();
